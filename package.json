@@ -1,0 +1,18 @@
+{
+  "name": "sentry-test",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "dotenv tsup --watch --onSuccess \"node --enable-source-maps ./dist/index.js",
+    "build": "dotenv tsup",
+    "start": "node --enable-source-maps ./dist/index.js",
+    "lint": "tsc --noEmit && eslint \"src/**/*.ts*\""
+  },
+  "dependencies": {
+    "@sentry/esbuild-plugin": "^2.2.2",
+    "@sentry/node": "^7.54.0",
+    "dotenv-cli": "^7.2.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.1.3"
+  }
+}
