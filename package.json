@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "dotenv tsup --watch --onSuccess \"node --enable-source-maps ./dist/index.js",
+    "dev": "dotenv -- tsup --watch --onSuccess \"node --enable-source-maps ./dist/index.js\"",
     "build": "dotenv tsup",
     "start": "node --enable-source-maps ./dist/index.js",
     "lint": "tsc --noEmit && eslint \"src/**/*.ts*\""

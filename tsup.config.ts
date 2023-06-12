@@ -1,5 +1,3 @@
-// import esbuildPluginPino from "esbuild-plugin-pino";
-import { copy } from 'esbuild-plugin-copy';
 import { defineConfig } from 'tsup';
 import { sentryEsbuildPlugin } from '@sentry/esbuild-plugin';
 
@@ -12,7 +10,7 @@ export default defineConfig({
       org: process.env.SENTRY_ORG,
       project: process.env.SENTRY_PROJECT,
       authToken: process.env.SENTRY_TOKEN,
-      disable: false,
+      disable: true,
       debug: true,
     }),
   ],
